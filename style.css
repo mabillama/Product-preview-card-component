@@ -5,9 +5,9 @@
   --clr-neutral-900: hsl(212, 21%, 14%);
   --clr-neutral-400: hsl(228, 12%, 48%);
   --clr-neutral-100: hsl(0, 0%, 100%);
-  
-  --ff-base: font-family: 'Montserrat', sans-serif;
-  --ff-accent: font-family: 'Fraunces', serif;
+
+  --ff-base: "Montserrat", sans-serif;
+  --ff-accent: "Fraunces", serif;
 
   --fw-regular: 500;
   --fw-bold: 700;
@@ -41,7 +41,7 @@ body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 /*
@@ -75,4 +75,57 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+/* General layout */
+
+body {
+  background-color: var(--clr-secondary-200);
+  color: var(--clr-neutral-400);
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+/* Utilities */
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Product */
+
+.product {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.product__content {
+  padding: var(--content-padding);
+  display: grid;
+  gap: var(--content-spacing);
+}
+
+.product__category {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.8125rem;
+}
+
+.product__title {
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--clr-neutral-900);
 }
